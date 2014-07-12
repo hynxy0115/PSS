@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="handler.ashx.cs" Class="MCStudio.SystemModules.Dep.action.handler" %>

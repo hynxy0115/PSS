@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>编辑功能</title>
+    <!--必需-->
+    <script src="/Resources/Scripts/basic.js"></script>
+
+    <script src="/Resources/Scripts/My97DatePicker/WdatePicker.js"></script>
+
+    <script src="js/modify.js"></script>
+</head>
+<body>
+    <form id="submitForm" name="submitForm" method="post">
+        <input type="hidden" name="ProdID" id="ProdID" value="0" />
+        <div id="container">
+            <div id="nav_links">
+                当前位置：商品管理&nbsp;>&nbsp;<span style="color: #1A5CC6;"> 商品编辑</span>
+            </div>
+            <div class="ui_content">
+                <table cellspacing="0" cellpadding="0" width="100%" align="left" border="0">
+                    <tr>
+                        <td class="ui_text_rt" width="140px">商品编码*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="ProdCode" name="ProdCode" disabled value="自动生成" class="ui_input_txt02" />
+                            规则：供应商编码+商品类型编码+到货日期
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">供应商*：</td>
+                        <td class="ui_text_lt">
+                            <select name="SupID" id="SupID" class="ui_select02">
+                                <option value="0">--请选择--</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">商品类型*：</td>
+                        <td class="ui_text_lt">
+                            <select name="ProdTypeID" id="ProdTypeID" class="ui_select02">
+                                <option value="0">--请选择--</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">商品名称*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="ProdName" name="ProdName" class="ui_input_txt02" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="ui_text_rt">车号*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="CarNo" name="CarNo" class="ui_input_txt02" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">型号*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="ProdNo" name="ProdNo" class="ui_input_txt02" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="ui_text_rt">商品成本价*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="CostPrice" name="CostPrice" class="ui_input_txt02" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">是否零售代卖商品*：</td>
+                        <td class="ui_text_lt">
+                            <select name="IsRetail" id="IsRetail" class="ui_select02">
+                                <option value="True">是</option>
+                                <option value="False" selected>否</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">到货日期*：</td>
+                        <td class="ui_text_lt">
+                            <input id="ArriveDate" name="ArriveDate" type="text" onclick="WdatePicker()" class="ui_input_txt02" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="ui_text_lt">&nbsp;<input type="button" id="submitbtn" value="提交" class="ui_input_btn01" />
+                            &nbsp;<input id="cancelbutton" type="button" value="取消" class="ui_input_btn01" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

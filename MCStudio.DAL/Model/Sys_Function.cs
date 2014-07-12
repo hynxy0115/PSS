@@ -1,0 +1,96 @@
+﻿/**  版本信息模板在安装目录下，可自行修改。
+* Sys_Function.cs
+*
+* 功 能： N/A
+* 类 名： Sys_Function
+*
+* Ver    变更日期             负责人  变更内容
+* ───────────────────────────────────
+* V0.01  2014/6/28 14:00:49   N/A    初版
+*
+* Copyright (c) 2012 Maticsoft Corporation. All rights reserved.
+*┌──────────────────────────────────┐
+*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．　│
+*│　版权所有：动软卓越（北京）科技有限公司　　　　　　　　　　　　　　│
+*└──────────────────────────────────┘
+*/
+using System;
+namespace MCStudio.PSS.Model
+{
+	/// <summary>
+	/// Sys_Function:实体类(属性说明自动提取数据库字段的描述信息)
+	/// </summary>
+	[Serializable]
+	public partial class Sys_Function
+	{
+		public Sys_Function()
+		{}
+		#region Model
+		private int _funid;
+		private string _funname;
+		private string _enfunname;
+		private string _funurl;
+		private int _funparentid=0;
+		private bool _isenable= true;
+		private int _orderindex=0;
+		/// <summary>
+		/// 
+		/// </summary>
+		public int FunID
+		{
+			set{ _funid=value;}
+			get{return _funid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string FunName
+		{
+			set{ _funname=value;}
+			get{return _funname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string EnFunName
+		{
+			set{ _enfunname=value;}
+			get{return _enfunname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string FunUrl
+		{
+			set{ _funurl=value;}
+			get{return _funurl;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int FunParentID
+		{
+			set{ _funparentid=value;}
+			get{return _funparentid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public bool IsEnable
+		{
+			set{ _isenable=value;}
+			get{return _isenable;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int OrderIndex
+		{
+			set{ _orderindex=value;}
+			get{return _orderindex;}
+		}
+		#endregion Model
+
+	}
+}
+

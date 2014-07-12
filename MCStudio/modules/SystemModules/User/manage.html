@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>用户管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0" />
+    <!--必需-->
+    <script src="/Resources/Scripts/basic.js"></script>
+
+    <!--可选-->
+    <script src="/Resources/MiniUI/boot.js"></script>
+
+    <!--页面局部使用-->
+    <script src="js/manage.js"></script>
+</head>
+<body>
+    <div class="mini-toolbar" style="border: 0;">
+        <div class="ui_content">
+            <div class="ui_text_indent">
+                <div id="box_border">
+                    <div id="box_top">搜索</div>
+                    <div id="box_center">
+                        用户名/登录名：<input type="text" id="UserName" class="ui_input_txt02" />
+                        是否可用：
+                        <select id="IsEnable" class="ui_select01">
+                            <option value="">--请选择--</option>
+                            <option value="1" selected>可用</option>
+                            <option value="0">停用</option>
+                        </select>
+                    </div>
+                    <div id="box_bottom">
+                        <input type="button" value="查询" class="ui_input_btn01" id="btnSearch" />
+                        <input type="button" value="新增" class="ui_input_btn01" id="btnAdd" />
+                        <input type="button" value="停用" class="ui_input_btn01" id="btnDel" />
+                        <input type="button" value="启用" class="ui_input_btn01" id="btnUp" />
+
+                        <input type="button" value="修改密码" class="ui_input_btn01" id="btnModifyPwd" />
+
+                        <input type="button" value="绑定角色" class="ui_input_btn01" id="btnBindRoles" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini-fit">
+        <div id="grid" class="mini-datagrid" style="width: 100%; height: 100%" multiselect="true" pagesize="30">
+            <div property="columns">
+                <div type="indexcolumn"></div>
+                <div type="checkcolumn"></div>
+                <div field="UserName" width="120" align="center" headeralign="center" allowsort="true">用户名</div>
+                <div field="UserLoginName" width="120" align="center" headeralign="center" allowsort="true">登录名</div>
+                <div field="DepName" width="120" align="center" headeralign="center" allowsort="true">所属部门</div>
+                <div field="InDate" width="120" align="center" headeralign="center" allowsort="true">入职时间</div>
+                <div field="CreateDate" width="120" align="center" headeralign="center" allowsort="true">创建时间</div>
+                <div field="Treatment" width="120" align="center" headeralign="center" allowsort="true">待遇</div>
+                <div field="IsEnable" width="120" align="center" headeralign="center" allowsort="true">是否可用</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

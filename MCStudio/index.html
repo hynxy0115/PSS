@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>进销存管理系统(PSS) v1.0</title>
+    <link href="/resources/css/authority/main_css.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/authority/zTreeStyle.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/resources/scripts/jquery/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="/resources/scripts/zTree/jquery.ztree.core-3.2.js"></script>
+    <script type="text/javascript" src="/resources/scripts/authority/commonAll.js"></script>
+    <script type="text/javascript" src="/resources/scripts/artDialog/artDialog.js?skin=default"></script>
+
+    <script src="/Resources/Scripts/index.js"></script>
+</head>
+<body onload="getDate01()">
+    <div id="top">
+        <div id="top_logo">
+            <img alt="logo" src="/resources/images/common/logo.png" width="274" height="49" style="vertical-align: middle;">
+        </div>
+        <div id="top_links">
+            <div id="top_op">
+                <ul>
+                    <li>
+                        <img alt="当前用户" src="/resources/images/common/user.jpg">：
+						<span id="CurrentUserName">无</span>
+                    </li>
+                    <li>
+                        <img alt="事务月份" src="/resources/images/common/month.jpg">：
+						<span id="yue_fen"></span>
+                    </li>
+                    <li>
+                        <img alt="今天是" src="/resources/images/common/date.jpg">：
+						<span id="day_day"></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="top_close">
+                <a href="javascript:void(0);" onclick="logout();" target="_parent">
+                    <img alt="退出系统" title="退出系统" src="/resources/images/common/close.jpg" style="position: relative; top: 10px; left: 25px;">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- side menu start -->
+    <div id="side">
+        <div id="left_menu">
+            <ul id="TabPage2" style="height: 200px; margin-top: 50px;">
+               
+            </ul>
+
+            <div id="nav_show" style="position: absolute; bottom: 0px; padding: 10px;">
+                <a href="javascript:;" id="show_hide_btn">
+                    <img alt="显示/隐藏" title="显示/隐藏" src="/resources/images/common/nav_hide.png" width="35" height="35">
+                </a>
+            </div>
+        </div>
+        <div id="left_menu_cnt">
+            <div id="nav_module">
+                <img src="/resources/images/common/salesmodules.png" width="210" height="58" />
+            </div>
+            <div id="nav_resource">
+                <ul id="dleft_tab1" class="ztree"></ul>
+            </div>
+        </div>
+    </div>
+    <!-- side menu start -->
+    <div id="top_nav">
+        <span id="here_area">当前位置：系统&nbsp;>&nbsp;系统介绍</span>
+    </div>
+    <div id="main">
+        <iframe name="right" id="rightMain" src="main.html" style="overflow: hidden; padding-left: 5px; padding-right: 5px;" frameborder="no" scrolling="auto" width="99%" height="99%" allowtransparency="true" />
+    </div>
+</body>
+</html>
+

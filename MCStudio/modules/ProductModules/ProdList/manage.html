@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>商品管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0" />
+    <!--必需-->
+    <script src="/Resources/Scripts/basic.js"></script>
+
+    <!--可选-->
+    <script src="/Resources/MiniUI/boot.js"></script>
+
+    <!--页面局部使用-->
+    <script src="js/manage.js"></script>
+</head>
+<body>
+    <div class="mini-toolbar" style="border: 0;">
+        <div class="ui_content">
+            <div class="ui_text_indent">
+                <div id="box_border">
+                    <div id="box_top">搜索</div>
+                    <div id="box_center">
+                        商品编码：<input type="text" id="ProdCode" class="ui_input_txt02" />
+                        商品名称：<input type="text" id="ProdName" class="ui_input_txt02" />
+                        供应商：<input type="text" id="SupName" class="ui_input_txt02" />
+                        商品类型：<input type="text" id="TypeName" class="ui_input_txt02" />
+                    </div>
+                    <div id="box_bottom">
+                        <input type="button" value="查询" class="ui_input_btn01" id="btnSearch" />
+                        <input type="button" value="新增" class="ui_input_btn01" id="btnAdd" />
+                        <input type="button" value="删除" class="ui_input_btn01" id="btnDel" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini-fit">
+        <div id="grid" class="mini-datagrid" style="width: 100%; height: 100%" multiselect="true" pagesize="30">
+            <div property="columns">
+                <div type="indexcolumn"></div>
+                <div type="checkcolumn"></div>
+                <div field="ProdCode" width="120" align="center" headeralign="center" allowsort="true">商品编码</div>
+                <div field="ProdName" width="120" align="center" headeralign="center" allowsort="true">商品名称</div>
+                <div field="SupCode" width="120" align="center" headeralign="center" allowsort="true">供应商编码</div>
+                <div field="SupName" width="120" align="center" headeralign="center" allowsort="true">供应商</div>
+                <div field="TypeCode" width="120" align="center" headeralign="center" allowsort="true">商品类型编码</div>
+                <div field="TypeName" width="120" align="center" headeralign="center" allowsort="true">商品类型</div>
+                <div field="ArriveDate" width="120" align="center" headeralign="center" allowsort="true">到货日期</div>
+                <div field="CarNo" width="120" align="center" headeralign="center" allowsort="true">车号</div>
+                <div field="ProdNo" width="120" align="center" headeralign="center" allowsort="true">型号</div>
+                <div field="CostPrice" width="120" align="center" headeralign="center" allowsort="true">商品成本价</div>
+                <div field="IsRetail" width="120" align="center" headeralign="center" allowsort="true">是否零售代卖商品</div>
+                <div field="CreateBy" width="120" align="center" headeralign="center" allowsort="true">添加人</div>
+                <div field="CreateOn" width="120" align="center" headeralign="center" allowsort="true">添加时间</div>
+                <div field="UpdateBy" width="120" align="center" headeralign="center" allowsort="true">修改人</div>
+                <div field="UpdateOn" width="120" align="center" headeralign="center" allowsort="true">修改时间</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

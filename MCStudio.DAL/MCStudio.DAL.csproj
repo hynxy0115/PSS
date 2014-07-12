@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD4DE7FF-3CF4-442E-A318-7F4E23290216}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MCStudio.DAL</RootNamespace>
+    <AssemblyName>MCStudio.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factory\ProductModules\ProdListFactory.cs" />
+    <Compile Include="Factory\ProductModules\TypeListFactory.cs" />
+    <Compile Include="Factory\SupplyChannels\SupplyFactory.cs" />
+    <Compile Include="Factory\SystemModules\DepFactory.cs" />
+    <Compile Include="Factory\SystemModules\EventFactory.cs" />
+    <Compile Include="Factory\SystemModules\FunctionFactory.cs" />
+    <Compile Include="Factory\SystemModules\RoleFactory.cs" />
+    <Compile Include="Factory\SystemModules\UserFactory.cs" />
+    <Compile Include="Model\Prod_Info.cs" />
+    <Compile Include="Model\Prod_Type.cs" />
+    <Compile Include="Model\Sup_Suply.cs" />
+    <Compile Include="Model\Sys_Config.cs" />
+    <Compile Include="Model\Sys_Department.cs" />
+    <Compile Include="Model\Sys_Function.cs" />
+    <Compile Include="Model\Sys_Job.cs" />
+    <Compile Include="Model\Sys_Role.cs" />
+    <Compile Include="Model\Sys_RoleFunction.cs" />
+    <Compile Include="Model\Sys_User.cs" />
+    <Compile Include="Model\SYS_USER4SESSION.cs" />
+    <Compile Include="Model\Sys_UserEvent.cs" />
+    <Compile Include="Model\Sys_UserJob.cs" />
+    <Compile Include="Model\Sys_UserRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MCStudio.Framework\MCStudio.Framework.csproj">
+      <Project>{79ba1795-282f-4f63-b578-1a1921cbfb9c}</Project>
+      <Name>MCStudio.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factory\FinancialModules\" />
+    <Folder Include="Factory\SalesModules\" />
+    <Folder Include="Factory\StockModules\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

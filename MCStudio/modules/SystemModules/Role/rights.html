@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>权限绑定</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0" />
+    <!--必需-->
+    <script src="/Resources/Scripts/basic.js"></script>
+
+    <!--可选-->
+    <script src="/Resources/MiniUI/boot.js"></script>
+
+    <!--页面局部使用-->
+    <script src="js/rights.js"></script>
+</head>
+<body>
+    <form id="submitForm" name="submitForm" method="post">
+        <input type="hidden" name="RoleID" id="RoleID" value="0" />
+        <div id="container">
+            <div id="nav_links">
+                当前位置：角色列表&nbsp;>&nbsp;<span style="color: #1A5CC6;">权限绑定</span>
+            </div>
+            <div class="ui_content">
+                <table cellspacing="0" cellpadding="0" align="left" border="0" style="width:100%;">
+                    <tr>
+                        <td class="ui_text_rt">功能名称*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="RoleName" name="RoleName" class="ui_input_txt02" readonly="readonly" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul id="rightTree" class="mini-tree" style="width:100%;height:350px;padding:5px;"
+                                showtreeicon="true" textfield="FunName" idfield="FunID" parentfield="FunParentID" resultastree="false"
+                                allowselect="false" enablehottrack="false" expandonload="true"
+                                showcheckbox="true" checkrecursive="false" autocheckparent="true"></ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="ui_text_lt">
+                            &nbsp;<input type="button" id="submitbtn" value="提交" class="ui_input_btn01" />
+                            &nbsp;<input id="cancelbutton" type="button" value="取消" class="ui_input_btn01" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

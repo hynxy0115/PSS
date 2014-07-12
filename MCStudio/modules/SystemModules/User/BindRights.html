@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>绑定角色
+    </title>
+    <!--必需-->
+    <script src="/Resources/Scripts/basic.js"></script>
+
+     <!--可选-->
+    <script src="/Resources/MiniUI/boot.js"></script>
+
+    <script src="js/bindroles.js"></script>
+</head>
+<body>
+    <form id="submitForm" name="submitForm" method="post">
+        <input type="hidden" name="UserID" id="UserID" value="0" />
+        <div id="container">
+            <div id="nav_links">
+                当前位置：用户列表&nbsp;>&nbsp;<span style="color: #1A5CC6;">绑定角色</span>
+            </div>
+            <div class="ui_content">
+                <table cellspacing="0" cellpadding="0" width="100%" align="left" border="0">
+                    <tr>
+                        <td class="ui_text_rt">用户列表*：</td>
+                        <td class="ui_text_lt">
+                            <input type="text" id="UserName" name="UserName" class="ui_input_txt02" style="width:450px;" readonly/>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="ui_text_rt">角色列表*：</td>
+                        <td class="ui_text_lt">
+                            <div id="listRights" class="mini-checkboxlist" repeatitems="5" repeatlayout="table" style="width:450px;height:auto;"
+                                textfield="RoleName" valuefield="RoleID" onload="loadRights">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="ui_text_lt">&nbsp;<input type="button" id="submitbtn" value="提交" class="ui_input_btn01" />
+                            &nbsp;<input id="cancelbutton" type="button" value="取消" class="ui_input_btn01" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
